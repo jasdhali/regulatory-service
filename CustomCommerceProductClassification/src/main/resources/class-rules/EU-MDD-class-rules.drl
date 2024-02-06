@@ -1,0 +1,131 @@
+//created on: 20200726-0500_16_33_06
+
+//created by: 83673@global.ul.com
+//Total rules Count : 367
+import com.example.nano.model.*;
+
+//declare any global variables here
+
+//Root Level or Level 0
+
+//Main rule start, Total Count : (236)
+//Level null 
+rule "EU MDD_Option_null"	
+	
+	when
+		classNode: ClassNode(market=="EU MDD" 	&& level==null	&& characteristicType==VitalCharacteristicType.Option	&& vitalCharacteristic==null 
+			
+			&& terminating == false
+			)
+			
+	then
+	
+	classNode.setExplanatoryText(null);
+			
+		classNode.addChildNode(ClassNode.builder().highestClassOverride(false).market("EU MDD").multiSelect("Y").characteristicType(VitalCharacteristicType.Title)
+				.ruleRef("").level("1-0").vitalCharacteristic("Is at least one of the special rules applicable? ").parentRef(classNode).classOverride("").intrimClass("").explanatoryText("Check all applicable. Check 'No' only if you are certain the Special Rules do not apply. ").parent("null").build());
+		classNode.addChildNode(ClassNode.builder().highestClassOverride(false).market("EU MDD").multiSelect("Y").characteristicType(VitalCharacteristicType.Option)
+				.ruleRef("").level("1-1").vitalCharacteristic("Yes, incorporating a medicinal product").parentRef(classNode).classOverride("").intrimClass("").successor("2").parent("null").build());
+		classNode.addChildNode(ClassNode.builder().highestClassOverride(false).market("EU MDD").multiSelect("Y").characteristicType(VitalCharacteristicType.Option)
+				.ruleRef("").level("1-2").vitalCharacteristic("Yes, for contraception or preventing of sexual diseases").parentRef(classNode).classOverride("").intrimClass("").parent("null").build());
+		classNode.addChildNode(ClassNode.builder().highestClassOverride(false).market("EU MDD").multiSelect("Y").characteristicType(VitalCharacteristicType.Option)
+				.ruleRef("").level("1-3").vitalCharacteristic("Yes, for disinfection, cleaning or sterilizing medical devices").parentRef(classNode).classOverride("").intrimClass("").parent("null").build());
+		classNode.addChildNode(ClassNode.builder().highestClassOverride(false).market("EU MDD").multiSelect("Y").characteristicType(VitalCharacteristicType.Option)
+				.ruleRef("").level("1-4").vitalCharacteristic("Yes, for recording X-ray images").parentRef(classNode).classOverride("").intrimClass("").parent("null").build());
+		classNode.addChildNode(ClassNode.builder().highestClassOverride(false).market("EU MDD").multiSelect("Y").characteristicType(VitalCharacteristicType.Option)
+				.ruleRef("").level("1-5").vitalCharacteristic("Yes, contains human or animal tissue or derivative").parentRef(classNode).classOverride("").intrimClass("").parent("null").build());
+		classNode.addChildNode(ClassNode.builder().highestClassOverride(false).market("EU MDD").multiSelect("Y").characteristicType(VitalCharacteristicType.Option)
+				.ruleRef("").level("1-6").vitalCharacteristic("Yes, blood bags").parentRef(classNode).classOverride("").intrimClass("").parent("null").build());
+		classNode.addChildNode(ClassNode.builder().highestClassOverride(false).market("EU MDD").multiSelect("Y").characteristicType(VitalCharacteristicType.Option)
+				.ruleRef("").level("1-7").vitalCharacteristic("No").parentRef(classNode).classOverride("").intrimClass("").successor("9.0").parent("null").build());
+end
+//Level 1-1 
+rule "EU MDD_Option_1-1"	
+	
+	salience(11)
+	activation-group "1-1"
+	when
+		classNode: ClassNode(market=="EU MDD" 	&& level=="1-1"	&& characteristicType==VitalCharacteristicType.Option	&& vitalCharacteristic=="Yes, incorporating a medicinal product" 
+			
+			&& terminating == false
+			)
+			
+	then
+	
+	classNode.setExplanatoryText(null);
+			
+		classNode.addChildNode(ClassNode.builder().highestClassOverride(false).market("EU MDD").characteristicType(VitalCharacteristicType.Title)
+				.ruleRef("").level("2-0").vitalCharacteristic("Is the device incorporating, an  integral part, a substance which, if used separately, can be considered to be a medicinal product, as defined Article 1 of Directive 2001/83/EC, and which is liable to act on the human body with action ancillary to that of the device?").parentRef(classNode).classOverride("").intrimClass("").explanatoryText("<i>Integral part</i> means that the device and the medicinal substance are physically or chemically combined at the time of administration to the patient.<BR>This rule does not cover those devices incorporating substances which under other circumstances may be considered as medicinal substances, but which are incorporated into the device exclusively for the purpose at maintaining certain characteristics of the device and which are not liable to act on the body. The primary function of the device does not rely on the pharmacological, metabolic or immunological effect of the medicine. If the latter is the case, the product is a medicinal product rather than a device and not covered by the MDD.<BR>See Medicinal Product Directive 2001/83/EC").parent("1-1").build());
+		classNode.addChildNode(ClassNode.builder().highestClassOverride(false).market("EU MDD").characteristicType(VitalCharacteristicType.Option)
+				.ruleRef("13").level("2-1").vitalCharacteristic("Yes").parentRef(classNode).classOverride("").intrimClass("Class III").classificationNotes("The device requires Notified Body involvement (Article 11(1)). The route to conformity assessment for Class III medical devices is Annex II Section 4 or Annex III plus Annex IV or V of the MDD 93/42/EEC. Most manufacturers apply Annex II, Section 4 and upon successful review the Notified Body would issue a CE marking certificate. The regulatory requirements are described in the FAQs, Section Roadmap and Technical Dossier Prep.").characteristics("ancillary medicinal substance").parent("1-1").build());
+		classNode.addChildNode(ClassNode.builder().highestClassOverride(false).market("EU MDD").characteristicType(VitalCharacteristicType.Option)
+				.ruleRef("").level("2-2").vitalCharacteristic("No").parentRef(classNode).classOverride("").intrimClass("").successor("3.0").parent("1-1").build());
+end
+//Level 1-2 
+rule "EU MDD_Option_1-2_1-1_1-2"	
+	
+	salience(1)
+	activation-group "1-2"
+	when
+		classNode: ClassNode(market=="EU MDD" 	&& level=="1-2"	&& characteristicType==VitalCharacteristicType.Option	&& vitalCharacteristic=="Yes, for contraception or preventing of sexual diseases" 
+			&& previousSteps contains "1-1"&& previousSteps contains "1-2"
+			&& terminating == false
+			)
+			
+	then
+	
+	classNode.setExplanatoryText(null);
+			
+		classNode.addChildNode(ClassNode.builder().highestClassOverride(false).market("EU MDD").characteristicType(VitalCharacteristicType.Title)
+				.ruleRef("").level("2-0").vitalCharacteristic("Is the device incorporating, an  integral part, a substance which, if used separately, can be considered to be a medicinal product, as defined Article 1 of Directive 2001/83/EC, and which is liable to act on the human body with action ancillary to that of the device?").parentRef(classNode).classOverride("").intrimClass("").explanatoryText("<i>Integral part</i> means that the device and the medicinal substance are physically or chemically combined at the time of administration to the patient.<BR>This rule does not cover those devices incorporating substances which under other circumstances may be considered as medicinal substances, but which are incorporated into the device exclusively for the purpose at maintaining certain characteristics of the device and which are not liable to act on the body. The primary function of the device does not rely on the pharmacological, metabolic or immunological effect of the medicine. If the latter is the case, the product is a medicinal product rather than a device and not covered by the MDD.<BR>See Medicinal Product Directive 2001/83/EC").parent("1-2").build());
+		classNode.addChildNode(ClassNode.builder().highestClassOverride(false).market("EU MDD").characteristicType(VitalCharacteristicType.Option)
+				.ruleRef("13").level("2-1").vitalCharacteristic("Yes").parentRef(classNode).classOverride("").intrimClass("Class III").classificationNotes("The device requires Notified Body involvement (Article 11(1)). The route to conformity assessment for Class III medical devices is Annex II Section 4 or Annex III plus Annex IV or V of the MDD 93/42/EEC. Most manufacturers apply Annex II, Section 4 and upon successful review the Notified Body would issue a CE marking certificate. The regulatory requirements are described in the FAQs, Section Roadmap and Technical Dossier Prep.").characteristics("ancillary medicinal substance").parent("1-2").build());
+		classNode.addChildNode(ClassNode.builder().highestClassOverride(false).market("EU MDD").characteristicType(VitalCharacteristicType.Option)
+				.ruleRef("").level("2-2").vitalCharacteristic("No").parentRef(classNode).classOverride("").intrimClass("").successor("3.0").parent("1-2").build());
+end
+//Level 1-2 
+rule "EU MDD_Option_1-2_1-2"	
+	
+	salience(0)
+	activation-group "1-2"
+	when
+		classNode: ClassNode(market=="EU MDD" 	&& level=="1-2"	&& characteristicType==VitalCharacteristicType.Option	&& vitalCharacteristic=="Yes, for contraception or preventing of sexual diseases" 
+			&& previousSteps contains "1-2"
+			&& terminating == false
+			)
+			
+	then
+	
+	classNode.setExplanatoryText(null);
+			
+		classNode.addChildNode(ClassNode.builder().highestClassOverride(false).market("EU MDD").characteristicType(VitalCharacteristicType.Title)
+				.ruleRef("").level("4-0").vitalCharacteristic("Is the device used for contraception or the prevention of the transmission of sexually transmitted diseases? ").parentRef(classNode).classOverride("").intrimClass("").explanatoryText("These intended uses relate to special cases of human vulnerability that cannot be covered by the normal criteria of time, invasiveness and organic function.<BR>Although this rule covers two very different device applications, some devices may perform both functions, e.g. condoms.<BR>Devices intended to prevent the sexual transmission of the HIV are also covered by this rule.").parent("1-2").build());
+		classNode.addChildNode(ClassNode.builder().highestClassOverride(false).market("EU MDD").characteristicType(VitalCharacteristicType.Option)
+				.ruleRef("14").level("4-1").vitalCharacteristic("Yes, and it is implantable or long-term invasive").parentRef(classNode).classOverride("").intrimClass("Class III").classificationNotes("The device requires Notified Body involvement (Article 11(1)). The route to conformity assessment for Class III medical devices is Annex II Section 4 or Annex III plus Annex IV or V of the MDD 93/42/EEC. Most manufacturers apply Annex II, Section 4 and upon successful review the Notified Body would issue a CE marking certificate. The regulatory requirements are described in the FAQs, Section Roadmap and Technical Dossier Prep.").characteristics("implantable device for contraception or the prevention of sexually transmitted diseases").parent("1-2").build());
+		classNode.addChildNode(ClassNode.builder().highestClassOverride(false).market("EU MDD").characteristicType(VitalCharacteristicType.Option)
+				.ruleRef("14").level("4-2").vitalCharacteristic("Yes, and it is not implantable or long-term invasive").parentRef(classNode).classOverride("").intrimClass("Class IIb").classificationNotes("The device requires Notified Body involvement (Article 11(3)). The route to conformity assessment for Class IIb medical devices is Annex II, excluding Section 4 of the MDD 93/42/EEC or Annex III plus Annex IV, V, or VI of the MDD 93/42/EEC. Most manufacturers apply Annex II, excluding Section 4 and upon successful review the Notified Body would issue a CE marking certificate. The regulatory requirements are described in the FAQs, Section Roadmap and Technical Dossier Prep.").characteristics("non-implantable device for contraception or the prevention of sexually transmitted diseases").parent("1-2").build());
+		classNode.addChildNode(ClassNode.builder().highestClassOverride(false).market("EU MDD").characteristicType(VitalCharacteristicType.Option)
+				.ruleRef("").level("4-3").vitalCharacteristic("No").parentRef(classNode).classOverride("").intrimClass("").parent("1-2").build());
+end
+//Level 1-3 
+rule "EU MDD_Option_1-3_1-1_1-3"	
+	
+	salience(2)
+	activation-group "1-3"
+	when
+		classNode: ClassNode(market=="EU MDD" 	&& level=="1-3"	&& characteristicType==VitalCharacteristicType.Option	&& vitalCharacteristic=="Yes, for disinfection, cleaning or sterilizing medical devices" 
+			&& previousSteps contains "1-1"&& previousSteps contains "1-3"
+			&& terminating == false
+			)
+			
+	then
+	
+	classNode.setExplanatoryText(null);
+			
+		classNode.addChildNode(ClassNode.builder().highestClassOverride(false).market("EU MDD").characteristicType(VitalCharacteristicType.Title)
+				.ruleRef("").level("2-0").vitalCharacteristic("Is the device incorporating, an  integral part, a substance which, if used separately, can be considered to be a medicinal product, as defined Article 1 of Directive 2001/83/EC, and which is liable to act on the human body with action ancillary to that of the device?").parentRef(classNode).classOverride("").intrimClass("").explanatoryText("<i>Integral part</i> means that the device and the medicinal substance are physically or chemically combined at the time of administration to the patient.<BR>This rule does not cover those devices incorporating substances which under other circumstances may be considered as medicinal substances, but which are incorporated into the device exclusively for the purpose at maintaining certain characteristics of the device and which are not liable to act on the body. The primary function of the device does not rely on the pharmacological, metabolic or immunological effect of the medicine. If the latter is the case, the product is a medicinal product rather than a device and not covered by the MDD.<BR>See Medicinal Product Directive 2001/83/EC").parent("1-3").build());
+		classNode.addChildNode(ClassNode.builder().highestClassOverride(false).market("EU MDD").characteristicType(VitalCharacteristicType.Option)
+				.ruleRef("13").level("2-1").vitalCharacteristic("Yes").parentRef(classNode).classOverride("").intrimClass("Class III").classificationNotes("The device requires Notified Body involvement (Article 11(1)). The route to conformity assessment for Class III medical devices is Annex II Section 4 or Annex III plus Annex IV or V of the MDD 93/42/EEC. Most manufacturers apply Annex II, Section 4 and upon successful review the Notified Body would issue a CE marking certificate. The regulatory requirements are described in the FAQs, Section Roadmap and Technical Dossier Prep.").characteristics("ancillary medicinal substance").parent("1-3").build());
+		classNode.addChildNode(ClassNode.builder().highestClassOverride(false).market("EU MDD").characteristicType(VitalCharacteristicType.Option)
+				.ruleRef("").level("2-2").vitalCharacteristic("No").parentRef(classNode).classOverride("").intrimClass("").successor("3.0").parent("1-3").build());
+end

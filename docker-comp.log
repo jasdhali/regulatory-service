@@ -1,0 +1,5 @@
+/home/jaspal/practice/maven/target/SimpleLibrary-0.0.1-SNAPSHOT.jar
+
+mvn install:install-file -Dfile=<path-to-file> -DgroupId=<group-id> -DartifactId=<artifact-id> -Dversion=<version> -Dpackaging=<packaging>
+
+mvn org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file -Dfile=/home/jaspal/practice/maven/target/SimpleLibrary-0.0.1-SNAPSHOT.jar

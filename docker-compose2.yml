@@ -1,0 +1,43 @@
+version: "3.4"
+services:
+ registration:
+  image: jasdhali/cust-commerce-registry-server:1.0.0
+  ports:
+   - "8761:8761"
+ gateway:
+  image: jasdhali/cust-commerce-api-gateway:1.0.0
+  ports:
+   - "8080:8080"
+  links:
+   - registration
+  environment:
+   - JAVA_OPTS=
+     -DEUREKA_URI=http://registration:8761/eureka
+  depends_on:
+   - registration   
+ security:
+  image: jasdhali/cust-commerce-jwt-security:1.0.0
+  ports:
+   - "8082:8082"
+  links:
+   - registration
+  environment:
+   - JAVA_OPTS=
+     -DEUREKA_URI=http://registration:8761/eureka
+  depends_on:
+   - registration
+   - gateway
+   
+ user-onboarding:
+  image: jasdhali/cust-commerce-user-onboarding:1.0.0
+  ports:
+   - "8081:8081"
+  links:
+   - registration
+  environment:
+   - JAVA_OPTS=
+     -DEUREKA_URI=http://registration:8761/eureka
+  depends_on:
+   - registration
+   - gateway
+   - security     

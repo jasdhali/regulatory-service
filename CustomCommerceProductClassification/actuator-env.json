@@ -1,0 +1,527 @@
+{
+	"activeProfiles": [],
+	"propertySources": [
+		{
+			"name": "server.ports",
+			"properties": {
+				"local.server.port": {
+					"value": "******"
+				}
+			}
+		},
+		{
+			"name": "commandLineArgs",
+			"properties": {
+				"spring.output.ansi.enabled": {
+					"value": "******"
+				}
+			}
+		},
+		{
+			"name": "servletContextInitParams",
+			"properties": {}
+		},
+		{
+			"name": "systemProperties",
+			"properties": {
+				"java.specification.version": {
+					"value": "******"
+				},
+				"sun.jnu.encoding": {
+					"value": "******"
+				},
+				"java.class.path": {
+					"value": "******"
+				},
+				"com.sun.management.jmxremote.authenticate": {
+					"value": "******"
+				},
+				"java.vm.vendor": {
+					"value": "******"
+				},
+				"sun.arch.data.model": {
+					"value": "******"
+				},
+				"java.vendor.url": {
+					"value": "******"
+				},
+				"catalina.useNaming": {
+					"value": "******"
+				},
+				"user.timezone": {
+					"value": "******"
+				},
+				"java.vm.specification.version": {
+					"value": "******"
+				},
+				"os.name": {
+					"value": "******"
+				},
+				"sun.java.launcher": {
+					"value": "******"
+				},
+				"user.country": {
+					"value": "******"
+				},
+				"sun.boot.library.path": {
+					"value": "******"
+				},
+				"com.sun.management.jmxremote.ssl": {
+					"value": "******"
+				},
+				"spring.application.admin.enabled": {
+					"value": "******"
+				},
+				"sun.java.command": {
+					"value": "******"
+				},
+				"com.sun.management.jmxremote": {
+					"value": "******"
+				},
+				"jdk.debug": {
+					"value": "******"
+				},
+				"sun.cpu.endian": {
+					"value": "******"
+				},
+				"spring.boot.project.name": {
+					"value": "******"
+				},
+				"user.home": {
+					"value": "******"
+				},
+				"user.language": {
+					"value": "******"
+				},
+				"java.specification.vendor": {
+					"value": "******"
+				},
+				"java.version.date": {
+					"value": "******"
+				},
+				"java.home": {
+					"value": "******"
+				},
+				"file.separator": {
+					"value": "******"
+				},
+				"java.vm.compressedOopsMode": {
+					"value": "******"
+				},
+				"line.separator": {
+					"value": "******"
+				},
+				"java.vm.specification.vendor": {
+					"value": "******"
+				},
+				"java.specification.name": {
+					"value": "******"
+				},
+				"FILE_LOG_CHARSET": {
+					"value": "******"
+				},
+				"java.awt.headless": {
+					"value": "******"
+				},
+				"sun.management.compiler": {
+					"value": "******"
+				},
+				"java.runtime.version": {
+					"value": "******"
+				},
+				"user.name": {
+					"value": "******"
+				},
+				"spring.jmx.enabled": {
+					"value": "******"
+				},
+				"stdout.encoding": {
+					"value": "******"
+				},
+				"path.separator": {
+					"value": "******"
+				},
+				"java.security.egd": {
+					"value": "******"
+				},
+				"management.endpoints.jmx.exposure.include": {
+					"value": "******"
+				},
+				"os.version": {
+					"value": "******"
+				},
+				"java.runtime.name": {
+					"value": "******"
+				},
+				"file.encoding": {
+					"value": "******"
+				},
+				"guice.disable.misplaced.annotation.check": {
+					"value": "******"
+				},
+				"java.vm.name": {
+					"value": "******"
+				},
+				"java.vendor.version": {
+					"value": "******"
+				},
+				"java.vendor.url.bug": {
+					"value": "******"
+				},
+				"java.io.tmpdir": {
+					"value": "******"
+				},
+				"catalina.home": {
+					"value": "******"
+				},
+				"com.sun.management.jmxremote.port": {
+					"value": "******"
+				},
+				"java.version": {
+					"value": "******"
+				},
+				"user.dir": {
+					"value": "******"
+				},
+				"os.arch": {
+					"value": "******"
+				},
+				"java.vm.specification.name": {
+					"value": "******"
+				},
+				"PID": {
+					"value": "******"
+				},
+				"mvel.debugger": {
+					"value": "******"
+				},
+				"CONSOLE_LOG_CHARSET": {
+					"value": "******"
+				},
+				"catalina.base": {
+					"value": "******"
+				},
+				"native.encoding": {
+					"value": "******"
+				},
+				"java.library.path": {
+					"value": "******"
+				},
+				"java.vm.info": {
+					"value": "******"
+				},
+				"stderr.encoding": {
+					"value": "******"
+				},
+				"java.vendor": {
+					"value": "******"
+				},
+				"java.vm.version": {
+					"value": "******"
+				},
+				"java.rmi.server.hostname": {
+					"value": "******"
+				},
+				"java.rmi.server.randomIDs": {
+					"value": "******"
+				},
+				"sun.io.unicode.encoding": {
+					"value": "******"
+				},
+				"java.class.version": {
+					"value": "******"
+				}
+			}
+		},
+		{
+			"name": "systemEnvironment",
+			"properties": {
+				"PATH": {
+					"value": "******",
+					"origin": "System Environment Property \"PATH\""
+				},
+				"XAUTHORITY": {
+					"value": "******",
+					"origin": "System Environment Property \"XAUTHORITY\""
+				},
+				"INVOCATION_ID": {
+					"value": "******",
+					"origin": "System Environment Property \"INVOCATION_ID\""
+				},
+				"XMODIFIERS": {
+					"value": "******",
+					"origin": "System Environment Property \"XMODIFIERS\""
+				},
+				"XDG_DATA_DIRS": {
+					"value": "******",
+					"origin": "System Environment Property \"XDG_DATA_DIRS\""
+				},
+				"GDMSESSION": {
+					"value": "******",
+					"origin": "System Environment Property \"GDMSESSION\""
+				},
+				"MANDATORY_PATH": {
+					"value": "******",
+					"origin": "System Environment Property \"MANDATORY_PATH\""
+				},
+				"GTK_IM_MODULE": {
+					"value": "******",
+					"origin": "System Environment Property \"GTK_IM_MODULE\""
+				},
+				"DBUS_SESSION_BUS_ADDRESS": {
+					"value": "******",
+					"origin": "System Environment Property \"DBUS_SESSION_BUS_ADDRESS\""
+				},
+				"DEFAULTS_PATH": {
+					"value": "******",
+					"origin": "System Environment Property \"DEFAULTS_PATH\""
+				},
+				"XDG_CURRENT_DESKTOP": {
+					"value": "******",
+					"origin": "System Environment Property \"XDG_CURRENT_DESKTOP\""
+				},
+				"JOURNAL_STREAM": {
+					"value": "******",
+					"origin": "System Environment Property \"JOURNAL_STREAM\""
+				},
+				"SESSION_MANAGER": {
+					"value": "******",
+					"origin": "System Environment Property \"SESSION_MANAGER\""
+				},
+				"USERNAME": {
+					"value": "******",
+					"origin": "System Environment Property \"USERNAME\""
+				},
+				"LOGNAME": {
+					"value": "******",
+					"origin": "System Environment Property \"LOGNAME\""
+				},
+				"PWD": {
+					"value": "******",
+					"origin": "System Environment Property \"PWD\""
+				},
+				"MANAGERPID": {
+					"value": "******",
+					"origin": "System Environment Property \"MANAGERPID\""
+				},
+				"IM_CONFIG_PHASE": {
+					"value": "******",
+					"origin": "System Environment Property \"IM_CONFIG_PHASE\""
+				},
+				"SHELL": {
+					"value": "******",
+					"origin": "System Environment Property \"SHELL\""
+				},
+				"GNOME_DESKTOP_SESSION_ID": {
+					"value": "******",
+					"origin": "System Environment Property \"GNOME_DESKTOP_SESSION_ID\""
+				},
+				"GTK_MODULES": {
+					"value": "******",
+					"origin": "System Environment Property \"GTK_MODULES\""
+				},
+				"DBUS_STARTER_ADDRESS": {
+					"value": "******",
+					"origin": "System Environment Property \"DBUS_STARTER_ADDRESS\""
+				},
+				"NODE_ENV": {
+					"value": "******",
+					"origin": "System Environment Property \"NODE_ENV\""
+				},
+				"DOTNET_BUNDLE_EXTRACT_BASE_DIR": {
+					"value": "******",
+					"origin": "System Environment Property \"DOTNET_BUNDLE_EXTRACT_BASE_DIR\""
+				},
+				"SYSTEMD_EXEC_PID": {
+					"value": "******",
+					"origin": "System Environment Property \"SYSTEMD_EXEC_PID\""
+				},
+				"XDG_SESSION_DESKTOP": {
+					"value": "******",
+					"origin": "System Environment Property \"XDG_SESSION_DESKTOP\""
+				},
+				"SSH_AGENT_LAUNCHER": {
+					"value": "******",
+					"origin": "System Environment Property \"SSH_AGENT_LAUNCHER\""
+				},
+				"SHLVL": {
+					"value": "******",
+					"origin": "System Environment Property \"SHLVL\""
+				},
+				"OXYGEN_DISABLE_INNER_SHADOWS_HACK": {
+					"value": "******",
+					"origin": "System Environment Property \"OXYGEN_DISABLE_INNER_SHADOWS_HACK\""
+				},
+				"QT_IM_MODULE": {
+					"value": "******",
+					"origin": "System Environment Property \"QT_IM_MODULE\""
+				},
+				"XDG_CONFIG_DIRS": {
+					"value": "******",
+					"origin": "System Environment Property \"XDG_CONFIG_DIRS\""
+				},
+				"LANG": {
+					"value": "******",
+					"origin": "System Environment Property \"LANG\""
+				},
+				"XDG_SESSION_TYPE": {
+					"value": "******",
+					"origin": "System Environment Property \"XDG_SESSION_TYPE\""
+				},
+				"DISPLAY": {
+					"value": "******",
+					"origin": "System Environment Property \"DISPLAY\""
+				},
+				"LIBVIRT_DEFAULT_URI": {
+					"value": "******",
+					"origin": "System Environment Property \"LIBVIRT_DEFAULT_URI\""
+				},
+				"XDG_SESSION_CLASS": {
+					"value": "******",
+					"origin": "System Environment Property \"XDG_SESSION_CLASS\""
+				},
+				"_": {
+					"value": "******",
+					"origin": "System Environment Property \"_\""
+				},
+				"LIBOVERLAY_SCROLLBAR": {
+					"value": "******",
+					"origin": "System Environment Property \"LIBOVERLAY_SCROLLBAR\""
+				},
+				"GDK_CORE_DEVICE_EVENTS": {
+					"value": "******",
+					"origin": "System Environment Property \"GDK_CORE_DEVICE_EVENTS\""
+				},
+				"GPG_AGENT_INFO": {
+					"value": "******",
+					"origin": "System Environment Property \"GPG_AGENT_INFO\""
+				},
+				"DESKTOP_SESSION": {
+					"value": "******",
+					"origin": "System Environment Property \"DESKTOP_SESSION\""
+				},
+				"USER": {
+					"value": "******",
+					"origin": "System Environment Property \"USER\""
+				},
+				"XDG_MENU_PREFIX": {
+					"value": "******",
+					"origin": "System Environment Property \"XDG_MENU_PREFIX\""
+				},
+				"GIO_LAUNCHED_DESKTOP_FILE_PID": {
+					"value": "******",
+					"origin": "System Environment Property \"GIO_LAUNCHED_DESKTOP_FILE_PID\""
+				},
+				"QT_ACCESSIBILITY": {
+					"value": "******",
+					"origin": "System Environment Property \"QT_ACCESSIBILITY\""
+				},
+				"WINDOWPATH": {
+					"value": "******",
+					"origin": "System Environment Property \"WINDOWPATH\""
+				},
+				"SSH_AUTH_SOCK": {
+					"value": "******",
+					"origin": "System Environment Property \"SSH_AUTH_SOCK\""
+				},
+				"GNOME_SHELL_SESSION_MODE": {
+					"value": "******",
+					"origin": "System Environment Property \"GNOME_SHELL_SESSION_MODE\""
+				},
+				"XDG_RUNTIME_DIR": {
+					"value": "******",
+					"origin": "System Environment Property \"XDG_RUNTIME_DIR\""
+				},
+				"DBUS_STARTER_BUS_TYPE": {
+					"value": "******",
+					"origin": "System Environment Property \"DBUS_STARTER_BUS_TYPE\""
+				},
+				"HOME": {
+					"value": "******",
+					"origin": "System Environment Property \"HOME\""
+				}
+			}
+		},
+		{
+			"name": "Config resource 'class path resource [application.properties]' via location 'optional:classpath:/'",
+			"properties": {
+				"rams.prodclass.azure.blobstorage": {
+					"value": "******",
+					"origin": "class path resource [application.properties] - 2:34"
+				},
+				"rams.prodclass.azure.container": {
+					"value": "******",
+					"origin": "class path resource [application.properties] - 3:32"
+				},
+				"rams.prodclass.rule-files": {
+					"value": "******",
+					"origin": "class path resource [application.properties] - 4:27"
+				},
+				"management.endpoints.jmx.exposure.include": {
+					"value": "******",
+					"origin": "class path resource [application.properties] - 11:43"
+				},
+				"management.endpoints.web.exposure.include": {
+					"value": "******",
+					"origin": "class path resource [application.properties] - 13:43"
+				}
+			}
+		},
+		{
+			"name": "devtools",
+			"properties": {
+				"spring.groovy.template.cache": {
+					"value": "******"
+				},
+				"server.servlet.jsp.init-parameters.development": {
+					"value": "******"
+				},
+				"spring.mvc.log-resolved-exception": {
+					"value": "******"
+				},
+				"spring.web.resources.chain.cache": {
+					"value": "******"
+				},
+				"spring.thymeleaf.cache": {
+					"value": "******"
+				},
+				"spring.freemarker.cache": {
+					"value": "******"
+				},
+				"server.error.include-stacktrace": {
+					"value": "******"
+				},
+				"spring.reactor.netty.shutdown-quiet-period": {
+					"value": "******"
+				},
+				"spring.graphql.graphiql.enabled": {
+					"value": "******"
+				},
+				"spring.h2.console.enabled": {
+					"value": "******"
+				},
+				"server.servlet.session.persistent": {
+					"value": "******"
+				},
+				"server.error.include-binding-errors": {
+					"value": "******"
+				},
+				"spring.template.provider.cache": {
+					"value": "******"
+				},
+				"server.error.include-message": {
+					"value": "******"
+				},
+				"spring.mustache.servlet.cache": {
+					"value": "******"
+				},
+				"spring.docker.compose.readiness.wait": {
+					"value": "******"
+				},
+				"spring.web.resources.cache.period": {
+					"value": "******"
+				}
+			}
+		}
+	]
+}
