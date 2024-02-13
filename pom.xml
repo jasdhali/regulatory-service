@@ -13,7 +13,8 @@
 		<module>CustCommerceRegistryServer</module>
 		<module>CustCommerceAPIGateway</module>
 		<module>CustCommerceJWTSecurity</module>		
-		<module>CustCommerceUserOnboarding</module>				
+		<module>CustCommerceUserOnboarding</module>
+		<module>CustomCommerceProductClassification</module>				
 	</modules>
 
 </project>

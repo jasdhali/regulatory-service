@@ -1,5 +1,5 @@
 server:
-  port: 9761
+  port: 8761
 spring:
   application:
     name: custom-commerce-registry-service

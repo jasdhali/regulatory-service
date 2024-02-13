@@ -10,4 +10,5 @@ public interface AuthenticationService {
 	String signUpAppUser(AppUserDTO appUserDTO);
 	JwtAuthenticationResponse signIn(SigninRequest signinRequest);
 	List<AppUserDTO> getUsers();
+	boolean validateToken(String token);
 }

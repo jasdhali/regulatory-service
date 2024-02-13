@@ -10,6 +10,6 @@ public class GreetingController {
 	
 	@GetMapping("/gateway-greeting")
 	public String greeting() {
-		return "Greeting from gateway";
+		return "Greeting from gateway"; 
 	}
 }

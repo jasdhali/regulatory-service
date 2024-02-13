@@ -68,5 +68,10 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 		List<ApplicationUser> applicationUsers = appuserRepository.findAll();
 		return applicationUsers.stream().map(AppUserDTO::from).toList();
 	}
+	
+	@Override
+	public boolean validateToken(String token) {
+		return jwtService.isTokenValid(token, null);
+	}
 
 }

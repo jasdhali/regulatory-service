@@ -2,6 +2,7 @@ package com.example.bootsecurity.config;
 
 import java.util.Arrays;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -32,8 +33,12 @@ import lombok.RequiredArgsConstructor;
 public class SecurityConfiguration {
 
 	private final UserService userService;
-	private final JwtTokenFilter jwtTokenFilter;
+	private final JwtTokenAndAuthFilter jwtTokenFilter;
 	
+	@Value("${spring.custom.security.enabled}")
+	private boolean securityEnbled;
+	
+			
 	@Bean
 	public CorsConfigurationSource corsConfigurationSource() {
 		CorsConfiguration configuration = new CorsConfiguration();
@@ -51,10 +56,11 @@ public class SecurityConfiguration {
 		httpSecurity.csrf(AbstractHttpConfigurer::disable);
 		httpSecurity.cors(Customizer.withDefaults());
 		// Authorize some urls like (swagger and signup etc)
+		if(securityEnbled) {
 		httpSecurity.authorizeHttpRequests(request -> request
 				.requestMatchers("/v3/**", "/swagger-ui/**", "/api/v1/auth/**" ).permitAll());
 		httpSecurity
-				.authorizeHttpRequests(request -> request.requestMatchers(HttpMethod.GET, "/hello/user").permitAll());
+				.authorizeHttpRequests(request -> request.requestMatchers(HttpMethod.GET, "**/hello/**").permitAll());
 		httpSecurity.authorizeHttpRequests(
 				request -> request.requestMatchers("/api/v1/admin").hasAnyAuthority(AppUserRole.ADMIN.name()));
 		httpSecurity.authorizeHttpRequests(
@@ -62,7 +68,11 @@ public class SecurityConfiguration {
 
 		// Set session to stateless.
 		httpSecurity.sessionManagement(manager -> manager.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
-
+		}
+		else {
+			httpSecurity.authorizeHttpRequests(request -> request
+					.requestMatchers("/**").permitAll());
+		}
 		httpSecurity.userDetailsService(userService.getUserDetailsService())
 				.authenticationProvider(getDBAuthenticationProvider());
 		httpSecurity.addFilterBefore(jwtTokenFilter, UsernamePasswordAuthenticationFilter.class);

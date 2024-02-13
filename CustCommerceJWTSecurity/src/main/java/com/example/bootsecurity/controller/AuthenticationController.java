@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.bootsecurity.dto.AppUserDTO;
@@ -43,6 +44,11 @@ public class AuthenticationController {
 		return responseEntity;
 		//return new ResponseEntity(response, HttpStatus.OK);
 	}
+	
+	@GetMapping("/validate")
+    public String validateToken(@RequestParam("token") String token) {		
+        return authenticationService.validateToken(token)?"Token is valid":"Token is invalid";
+    }
 
 	@GetMapping("/users")
 	public ResponseEntity<List<AppUserDTO>> users() {

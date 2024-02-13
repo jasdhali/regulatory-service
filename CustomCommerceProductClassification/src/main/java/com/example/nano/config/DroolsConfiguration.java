@@ -26,7 +26,7 @@ public class DroolsConfiguration {
 	@Value("${rams.prodclass.rule-files}")
 	private String[] allProdClassRuleFiles;
 	
-	@Bean
+	//@Bean
 	public KieContainer kieContainer() {
 		KieServices kieServices = KieServices.Factory.get();
 

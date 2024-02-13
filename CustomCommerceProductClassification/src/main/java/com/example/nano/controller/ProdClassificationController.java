@@ -4,6 +4,7 @@ package com.example.nano.controller;
 import org.slf4j.Logger;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -65,6 +66,14 @@ public class ProdClassificationController {
 				HttpStatus.OK);
 	}
 
+	@GetMapping("/hello")	
+	public String getHello() {
+		return "Hello";
+	}
+	@PostMapping("/hellopost")	
+	public String getHelloPost() {
+		return "Post Hello";
+	}
 
 
 }
